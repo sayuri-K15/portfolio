@@ -1,9 +1,256 @@
 @charset "UTF-8";
 
-body {
-  font-family: fot-tsukuardgothic-std, "YuGothic", sans-serif;
+
+$white: #fff;
+$beige: #FFF9F0;
+$offWhite: #FCFCF9;
+$blue: #0B83FA;
+$lightGray:#F5F5F5;
+$gray: #99A4AE;
+$softBlack: #707070;
+$black: #383838;
+$green: #59BEAB;
+$darkGreen: #6F7E76;
+
+
+
+// -----------レスポンシブ--------------
+
+
+$breakpoints: ('sm': 'screen and (max-width: 400px)',
+'md': 'screen and (max-width: 768px)',
+'lg': 'screen and (max-width: 1000px)',
+'xl': 'screen and (max-width: 1200px)',
+) !default;
+
+@mixin mq($breakpoint: xl) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
 }
 
-h1 {
-  color: red;
+// ----------------------------------------------
+
+@mixin container {
+  width: 800px;
+  height: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  margin-bottom: 100px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+}
+@mixin title {
+  font-size: 47px;
+  color: $softBlack;
+  position: absolute;
+  top: -20px;
+}
+
+@mixin contents {
+  width: 80%;
+    margin: auto;
+    font-size: 17px;
+    line-height: 27px;
+}
+
+//---------------------------------------------
+body {
+  font-family: fot-tsukuardgothic-std, "YuGothic", sans-serif;
+  background-color: $offWhite;
+}
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gi-header {
+  width: 100%;
+  #nav-drawer {
+    position: relative;
+  }
+  .nav-unshown {
+    display: none;
+  }
+  #nav-open {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: middle;
+    span,
+    span::before,
+    span::after {
+      position: absolute;
+      height: 3px;
+      width: 25px;
+      border-radius: 3px;
+      background-color: #555;
+      display: block;
+      content: "";
+      cursor: pointer;
+    }
+    span::before {
+      bottom: -8px;
+    }
+    span::after {
+      bottom: -16px;
+    }
+  }
+
+  // 閉じる用の薄黒カバー
+  #nav-close {
+    display: none;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: .3s ease-in-out;
+  }
+
+  // 中身
+  #nav-content {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 90%;
+    max-width: 330px;
+    height: 100%;
+    background: #fff;
+    transition: .3s ease-in-out;
+    transform: translateX(-105%);
+  }
+  #nav-input:checked ~ #nav-content {
+    transform: translateX(0%);
+    box-shadow: 6px 0 25px  rgba(0, 0, 0, .15);
+  }
+
+
+
+}
+
+//----------メインイメージ----------------
+.hero {
+  width: 100%;
+  height: 755px;
+  margin-bottom: 120px;
+  background: url("../img/hero.jpg") center center no-repeat;
+  background-size: contain;
+
+  &__title {
+    text-align: center;
+    font-size: 60px;
+    color: $offWhite;
+    padding-top: 380px;
+    padding-left: 10px;
+    margin-bottom: 8px;
+  }
+  &__subtitle {
+    text-align: center;
+    font-size: 30px;
+    color: $darkGreen;
+    padding-left: 10px;
+  }
+}
+//---------------About---------------------
+
+.about {
+  @include container;
+
+  &__title {
+    @include title;
+    left: 0;
+  }
+
+  &__lists {
+    width: 70%;
+    height: 90%;
+    background-color: $lightGray;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-top: 30px;
+    
+  }
+  &__list {
+    @include contents;
+  }
+}
+
+//------------------Works--------------------
+
+.works {
+  @include container;
+  &__title {
+    @include title;
+    right: 0;
+  }
+}
+
+//------------------Skills------------------
+.skills {
+  @include container;
+  &__title {
+    @include title;
+    left: 0;
+  }
+}
+.skill {
+  width: 330px;
+  height: 330px;
+  padding: 20px;
+  background-color: $lightGray;
+  position: absolute;
+
+  &:nth-of-type(1) {
+    bottom: 0;
+    left: 0;
+  }
+  &:nth-of-type(2) {
+    top: 0;
+    right: 0;
+  }
+
+  &__item, &__title {
+    @include contents;
+  }
+  &__title {
+    margin-bottom: 5px;
+  }
+}
+
+//---------------------Posts----------------
+.posts {
+  @include container;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 50px;
+  &__title {
+    @include title;
+    right: 0;
+  }
+}
+.post {
+  width: 30%;
+  height: 60%;
+  border: 1px solid $lightGray;
+}
+
+//--------------------CONTACT------------------
+
+.contact {
+  width: 100%;
+  height: 300px;
+  background-color: $darkGreen;
+  &__title {
+    font-size: 47px;
+    text-align: center;
+    color: #FCFCFC;
+  }
 }

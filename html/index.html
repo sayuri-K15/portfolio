@@ -11,20 +11,27 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div class="wrap">
   <header class="gl-header">
-    <nav class="gl-nav">
-      <ul class="gl-nav__lists">
-        <li class="gl-nav__list"><a href="http://">Top</a></li>
-        <li class="gl-nav__list"><a href="http://">About</a></li>
-        <li class="gl-nav__list"><a href="http://">Works</a></li>
-        <li class="gl-nav__list"><a href="http://">Skills</a></li>
-        <li class="gl-nav__list"><a href="http://">Posts</a></li>
-        <li class="gl-nav__list"><a href="http://">Contact</a></li>
-      </ul>
-    </nav>
+    <div id="nav-drawer">
+      <input type="checkbox" id="nav-input" class="nav-unshown">
+      <label for="nav-input" id="nav-open"><span></span></label>
+      <label for="nav-input" id="nav-close" class="nav-unshown"></label>
+        
+      <nav id="nav-content" class="gl-nav">
+        <ul class="gl-nav__lists">
+          <li class="gl-nav__list"><a href="http://">Top</a></li>
+          <li class="gl-nav__list"><a href="http://">About</a></li>
+          <li class="gl-nav__list"><a href="http://">Works</a></li>
+          <li class="gl-nav__list"><a href="http://">Skills</a></li>
+          <li class="gl-nav__list"><a href="http://">Posts</a></li>
+          <li class="gl-nav__list"><a href="http://">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
   <main id="top" class="hero">
-    <h1 class="hero__title">Sayuri Kudo's portfolio</h1>
+    <h1 class="hero__title"><strong>Sayuri Kudo's</strong> portfolio</h1>
     <p class="hero__subtitle">Web Enginner</p>
   </main>
   <section id="about" class="about">
@@ -81,14 +88,19 @@
       <h3><a href="https://qiita.com/zd15shirokuma/items/624ffd0ec14f39369365">ターミナルって？だったけどGitの鍵設定できた話</a></h3>
       <small>2019/12/15</small>
     </div>
+    <div class="post">
+      <h3><a href="https://qiita.com/zd15shirokuma/items/624ffd0ec14f39369365">未定</a></h3>
+      <small>2019/12/15</small>
+    </div>
   </section>
-  <footer id="contact">
-    <h2>Contact</h2>
+  <footer id="contact" class="contact">
+    <h2 class="contact__title">Contact</h2>
     <ul>
       <li>mail: <a href="">zd15shirokuma@gmail.com</a></li>
       <li>Github: <a href="https://github.com/sayuri-K15">sayuri-K15</a></li>
       <li>Twitter: <a href="https://twitter.com/shiro15kuma">@shiro15kuma</a></li>
     </ul>
   </footer>
+</div>
 </body>
 </html>
