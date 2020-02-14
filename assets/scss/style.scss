@@ -4,7 +4,7 @@
 $white: #fff;
 $beige: #FFF9F0;
 $offWhite: #FCFCF9;
-$blue: #0B83FA;
+$yellow: #ffc668;
 $lightGray:#F5F5F5;
 $gray: #99A4AE;
 $softBlack: #707070;
@@ -55,9 +55,28 @@ $breakpoints: ('sm': 'screen and (max-width: 400px)',
     line-height: 27px;
 }
 
+@mixin ribbon {
+  background-color: $yellow;
+  display: inline-block;
+
+  :before {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    z-index: 1;
+  }
+  :after {
+    top: 0;
+    right: 0;
+    border-width: 30px 15px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+  }
+}
 //---------------------------------------------
 body {
-  font-family: fot-tsukuardgothic-std, "YuGothic", sans-serif;
+  font-family: fot-tsukuardgothic-std, "YuGothic", Arial, sans-serif;
   background-color: $offWhite;
 }
 .wrap {
@@ -165,6 +184,7 @@ body {
 
   &__title {
     @include title;
+    @include ribbon;
     left: 0;
   }
 
@@ -176,7 +196,7 @@ body {
     bottom: 0;
     right: 0;
     padding-top: 30px;
-    
+
   }
   &__list {
     @include contents;
