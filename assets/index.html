@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Portfolio</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=EB+Garamond&display=swap">
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.0/sanitize.min.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
@@ -15,17 +16,17 @@
   <header class="gl-header">
     <div id="nav-drawer">
       <input type="checkbox" id="nav-input" class="nav-unshown">
-      <label for="nav-input" id="nav-open"><span></span></label>
+      <label for="nav-input" id="nav-open"><span class="fa fa-bars"></span></label>
       <label for="nav-input" id="nav-close" class="nav-unshown"></label>
         
       <nav id="nav-content" class="gl-nav">
         <ul class="gl-nav__lists">
-          <li class="gl-nav__list"><a href="http://">Top</a></li>
-          <li class="gl-nav__list"><a href="http://">About</a></li>
-          <li class="gl-nav__list"><a href="http://">Works</a></li>
-          <li class="gl-nav__list"><a href="http://">Skills</a></li>
-          <li class="gl-nav__list"><a href="http://">Posts</a></li>
-          <li class="gl-nav__list"><a href="http://">Contact</a></li>
+          <li class="gl-nav__list"><a href="#top">Top</a></li>
+          <li class="gl-nav__list"><a href="#about">About</a></li>
+          <li class="gl-nav__list"><a href="#work">Works</a></li>
+          <li class="gl-nav__list"><a href="#skills">Skills</a></li>
+          <li class="gl-nav__list"><a href="#posts">Posts</a></li>
+          <li class="gl-nav__list"><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -37,12 +38,13 @@
   <section id="about" class="about">
     <h2 class="about__title">About</h2>
     <ul class="about__lists">
-      <li class="about__list">名前：工藤小百合</li>
-      <li class="about__list">出身：青森県</li>
-      <li class="about__list">経歴：大学卒業後からアパレル業界で約8年。新店舗立ち上げ、店長、基幹店のサブ店長を経験しました。もっと幅広いところで誰かの役に立つ仕事がしたい、自分自身のスキルになるものを増やしたいと感じていた時、プログラミングを知り、2019年5月に8年勤めた会社を退職。半年間プログラミングの職業訓練校に通い、現在転職活動中。</li>
-      <li class="about__list">mail: <a href="">zd15shirokuma@gmail.com</a></li>
-      <li class="about__list">Github: <a href="https://github.com/sayuri-K15">sayuri-K15</a></li>
-      <li class="about__list">Twitter: <a href="https://twitter.com/shiro15kuma">@shiro15kuma</a></li>
+      <li class="about__list"><span>名前</span>工藤小百合</li>
+      <li class="about__list"><span>出身</span>青森県</li>
+      <li class="about__list"><span>学歴</span>宇都宮大学国際学部国際文化学科卒業</li>
+      <li class="about__list"><span>経歴</span>新卒で入社したアパレル小売業の会社で約8年勤務。その間に新店舗立ち上げメンバー、本店移動、基幹店の店長を3年以上経験。30歳になり、将来的にもっと幅広いところで誰かの役に立てる仕事がしたい、自分自身で何か形に出来るスキルを身につけたいと感じていた時、プログラミングを知り退職。半年間プログラミングスクールに通い、現在転職活動中。</li>
+      <li class="contact__list"> <a href=""><span class="fa fa-envelope-o fa-lg"></span></a></li>
+      <li class="contact__list"><a href="https://github.com/sayuri-K15"><span class="fa fa-github fa-lg"></span></a></li>
+      <li class="contact__list"><a href="https://twitter.com/shiro15kuma"><span class="fa fa-twitter fa-lg"></span></a></li>
     </ul>
   </section>
   <section id="works" class="works">
@@ -59,10 +61,10 @@
     <div class="skill">
       <h3 class="skill__title">使用言語・フレームワーク</h3>
       <ul class="skill__items">
-        <li class="skill__item">html</li>
-        <li class="skill__item">css</li>
-        <li class="skill__item">sass</li>
-        <li class="skill__item">Bootstrap</li>
+        <li class="skill__item">HTML5</li>
+        <li class="skill__item">css3</li>
+        <li class="skill__item">Sass</li>
+        <li class="skill__item">bootstrap</li>
         <li class="skill__item">jQuery</li>
         <li class="skill__item">JavaScript</li>
         <li class="skill__item">vue.js</li>
@@ -96,9 +98,9 @@
   <footer id="contact" class="contact">
     <h2 class="contact__title">Contact</h2>
     <ul>
-      <li>mail: <a href="">zd15shirokuma@gmail.com</a></li>
-      <li>Github: <a href="https://github.com/sayuri-K15">sayuri-K15</a></li>
-      <li>Twitter: <a href="https://twitter.com/shiro15kuma">@shiro15kuma</a></li>
+      <li class="contact__list"> <a href=""><span class="fa fa-envelope-o"></span></a></li>
+      <li class="contact__list"><a href="https://github.com/sayuri-K15"><span class="fa fa-github"></span></a></li>
+      <li class="contact__list"><a href="https://twitter.com/shiro15kuma"><span class="fa fa-twitter"></span></a></li>
     </ul>
   </footer>
 </div>
